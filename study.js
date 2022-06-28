@@ -87,7 +87,7 @@ for( let y = 0 ; y <2; y+=1){
         console.log(`${y}-${c}`);
     }
 }
-*/
+
 // functions
 
 // functions are first-class objects.
@@ -151,4 +151,97 @@ let filt = random.filter(n=>{
 console.log(filt);
 
 
+/*
+const stackMain=()=>{
+let input = [ 1,2,3,4,5,6,7];
+let counter = 0;
+let stack = [];
+for (let  i= 0; i<=input.length;i++){
+    
+    stack.push(i);
+    counter=counter+1;
+}
+stack.push(4);
+console.log(stack);
+//console.log(counter);
 
+for (let i = 0 ; i <=input.length;i++){
+    if(counter>0){
+    stack.pop();
+    counter=counter-1;
+    console.log(stack);
+    console.log(counter);
+}
+}
+};
+
+stackMain();
+
+*/
+
+const companies=[
+    {  name : "company 1", category:"finanace", start:1991 , end :2002 },
+    {  name : "company 2", category:"finanace", start:1996 , end :2018 },
+    {  name : "company 3", category:"banking", start:1990 , end :2016 },
+    {  name : "company 4", category:"medical", start:1987 , end :2021 },
+    {  name : "company 5", category:"medical", start:1995 , end :2020 },
+    {  name : "company 6", category:"banking", start:1988 , end :2019 },
+];
+
+const ages = [ 12,23,45,54,67,87,33];
+
+
+//forEach-
+
+/*
+for (let i = 0; i <= companies.length;i ++){
+    //console.log(companies[i]);}
+
+companies.forEach(function(i){
+    console.log(i.name);
+})
+
+
+//FILTER
+
+let canDrink =[];
+
+for (let i = 0 ; i <= ages.length; i ++){
+    if(ages[i]>=21){
+        canDrink.push(ages[i]);
+    }
+};
+console.log(canDrink);
+
+
+const canDrink = ages.filter(function(age){
+    if(age>=50){
+        return true;
+    }
+});
+console.log(canDrink);
+
+const canDrink = ages.filter(age => age>=21);
+console.log(canDrink);
+
+
+const retailComp = companies.filter(company => company.category==='medical');
+console.log(retailComp);
+
+
+
+//sort
+
+const sortCo = companies.sort(function(a,b){
+    if (a.start>b.start){
+        return 1;
+    }else {
+        return-1;
+    };
+})
+console.log(sortCo);
+
+//const sortedComp  = companies.sort((a,b)=> (a.start>b.start? 1: -1));
+//console.log(sortedComp);
+
+*/
