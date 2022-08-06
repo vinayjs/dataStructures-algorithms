@@ -18,7 +18,7 @@ const test = num => {
     }else{
         console.log("not palindrome")
     }
-    console.log(temp)
+    console.log(result)
   }
   
   test(123);
