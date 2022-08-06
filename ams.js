@@ -6,9 +6,10 @@
 const ams = (n) => {
     let result = 0;
     let temp = n;
+    let len = (""+ temp).length;
     while(temp > 0) {
         let digit = temp % 10;
-        result += digit**3;
+        result += digit**len;
         temp = parseInt(temp/10);
     }
     if(result == n){
@@ -19,6 +20,8 @@ const ams = (n) => {
     console.log(result);
 }
 
-//ams(153);
-//ams(155);
-//ams(371);
+//ams(1634);
+// ams(155);
+// ams(371);
+ams(133);
+
