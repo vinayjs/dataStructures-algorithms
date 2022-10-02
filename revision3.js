@@ -4501,3 +4501,94 @@ console.log(searchTriplets([-3, 0, 1, 2, -1, 1, -2]));
 // result = reverseElements(head, 3);
 // console.log("new order : ");
 // result.printList();
+/ question - 1
+//Given an array of positive numbers and a positive number ‘k,’ 
+//find the maximum sum of any contiguous subarray of size ‘k’.
+
+// Input: [2, 1, 5, 1, 3, 2], k=3 
+// Output: 9
+// Explanation: Subarray with maximum sum is [5, 1, 3].
+
+const maxSubArray = (arr, k) => {
+    let maxSum = 0;
+    let windowSum = 0,
+        windowStart = 0;
+    for (windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+        windowSum += arr[windowEnd];
+
+        if (winndowEnd >= k - 1) {
+            maxSum = Math.max(maxSum, windowSum);
+            windowSum -= arr[windowStart];
+            windowStart += 1;
+        }
+    }
+    return maxSum;
+}
+
+// console.log(maxSubArray([2, 1, 5, 1, 3, 2], 3));
+
+//question - 2
+// Given an array of positive integers and a number ‘S,’ 
+// find the length of the smallest contiguous subarray whose sum is greater than or equal to ‘S’. 
+// Return 0 if no such subarray exists.
+// Input: [2, 1, 5, 2, 3, 2], S=7
+// Output: 2
+// Explanation: The smallest subarray with a sum greater than or equal to ‘7’ is [5, 2].
+
+// const smallestSubArraySum = (arr, s) => {
+//     let minLength = Infinity;
+//     let windowSum = 0;
+//     let windowStart = 0;
+
+//     for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+//         windowSum += arr[windowEnd];
+
+//         while (windowSum >= s) {
+//             minLength = Math.min(minLength, windowEnd - windowStart + 1);
+//             windowSum -= arr[windowStart]
+//             windowStart += 1;
+//         }
+//     }
+//     if (minLength === Infinity) {
+//         return 0;
+//     }
+//     return minLength;
+
+// }
+
+// // console.log(smallestSubArraySum([2, 1, 5, 2, 3, 2], 7));
+
+// // question - 3
+// // Longest Substring with maximum K Distinct Characters (medium)
+// // Given a string, 
+// // find the length of the longest substring in it with no more than K distinct characters.
+
+// // Input: String="araaci", K=2
+// // Output: 4
+// // Explanation: The longest substring with no more than '2' distinct characters is "araa".
+
+// const longestSubstring = (str, k) => {
+//     let windowStart = 0,
+//         maxLength = 0,
+//         charFrequency = {};
+
+//     for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
+//         const rightChar = str[windowEnd];
+//         if(!(rightChar in charFrequency)) {
+//             charFrequency[rightChar] = 0;
+//         }
+//         charFrequency[rightChar] += 1;
+
+//         while(Object.keys(charFrequency).length > k) {
+//             const leftChar = str[windowStart];
+//             charFrequency[leftChar] -= 1;
+//             if (charFrequency[leftChar] === 0) {
+//                 delete charFrequency[leftChar];
+//             }
+//             windowStart += 1;
+//         }
+//         maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
+//     }
+//     return maxLength;
+// }
+// // console.log(longestSubstring("araaci", 2));
