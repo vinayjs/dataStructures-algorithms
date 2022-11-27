@@ -10,9 +10,9 @@ Data Structures
  
  ### Patterns 
  
- Sliding Window
- Two Pointers
- Fast and Slow Pointers
- DFS
- BFS
- Heaps
+ #### Sliding Window
+ #### Two Pointers
+ #### Fast and Slow Pointers
+ #### DFS
+ #### BFS
+ #### Heaps
