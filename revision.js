@@ -321,5 +321,21 @@
 //   }
   
 //   console.log(smallSubArray(7, [2, 1, 5, 2, 3, 2]));
+// Remove Duplicates
+// Input: [2, 3, 3, 3, 6, 9, 9]
+// Output: 4
+// Explanation: The first four elements after removing the duplicates will be [2, 3, 6, 9].
 
+// const removeDup = (arr) => {
+//     let nextNonDup = 1;
+//     let i = 0;
+//     while(i < arr.length){
+//         if(arr[nextNonDup - 1] !== arr[i]){
+//             arr[nextNonDup] = arr[i];
+//             nextNonDup += 1;
+//         }
+//         i += 1;
+//     }
+//     return nextNonDup;
+// }
 
