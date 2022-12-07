@@ -142,3 +142,26 @@
 // }
 // console.log(longSubString("abacbd"))
 
+// // // Given an array, find the average of each subarray of ‘K’ contiguous elements in it.
+
+// // // Array: [1, 3, 2, 6, -1, 4, 1, 8, 2], K=5
+
+// // const average = (arr, k) => {
+// //     n = arr.length;
+// //     result = []
+// //     windowSum  = 0;
+// //     windowStart = 0;
+// //     for (let i = 0; i < n; i++) {
+// //         windowSum += arr[i] 
+// //         if (i >= k-1) {
+// //             result.push(windowSum / k);
+// //             windowSum -= arr[windowStart];
+// //             windowStart += 1;
+
+// //         }
+// //     }
+// //     return result;
+// // }
+
+// // // console.log(average([1, 3, 2, 6, -1, 4, 1, 8, 2], 5));
+
